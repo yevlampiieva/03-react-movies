@@ -5,7 +5,7 @@ interface fetchMoviesResponse {
   results: Movie[];
 }
 
-export const fetchMovies = async (query: string) => {
+export const fetchMovies = async (query: string): Promise<Movie[]> => {
   const response = await axios.get<fetchMoviesResponse>(
     `https://api.themoviedb.org/3/search/movie`,
     {
