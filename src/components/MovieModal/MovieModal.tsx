@@ -33,7 +33,7 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
 
   const img =
     movie.backdrop_path === null
-      ? "../../assets/error_img.svg"
+      ? "/error_img.svg"
       : `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
 
   return createPortal(
